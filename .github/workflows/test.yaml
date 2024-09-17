@@ -7,11 +7,10 @@ jobs:
       - uses: actions/checkout@v4 #загрузка файла из репозитория на машину(runs-on)
       - run: sudo apt-get update && sudo apt-get install -y cmake
       - run: mkdir cmake-build-debug && cmake -B cmake-build-debug -S . && cmake --build cmake-build-debug
-      - uses: actions/upload-artifacr@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: binaries
           path: |
-#            cmake-build-debug/benchmark
             cmake-build-debug/tests
   tests:
     runs-on: ubuntu-latest
