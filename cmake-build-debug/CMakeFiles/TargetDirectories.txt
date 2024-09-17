@@ -1,3 +1,0 @@
-/home/adfips/CLionProjects/VegaCurse/cmake-build-debug/CMakeFiles/VegaCurse.dir
-/home/adfips/CLionProjects/VegaCurse/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/adfips/CLionProjects/VegaCurse/cmake-build-debug/CMakeFiles/rebuild_cache.dir
