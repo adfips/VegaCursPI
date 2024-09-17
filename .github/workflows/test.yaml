@@ -12,6 +12,7 @@ jobs:
           name: binaries
           path: |
             cmake-build-debug/tests
+            cmake-build-debug/benchmarks
   tests:
     needs: [build]
     runs-on: ubuntu-latest
@@ -21,11 +22,11 @@ jobs:
           name: binaries
       - run: chmod +x tests && ./tests
 
-#  benchmark:
-#    needs: [build]
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/download-artifact@v4
-#        with:
-#          name: binaries
-#      - run: chmod +x benchmark && ./benchmark
+  benchmark:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: binaries
+      - run: chmod +x benchmarks && ./benchmarks
