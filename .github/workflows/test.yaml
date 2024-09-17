@@ -1,0 +1,9 @@
+name: build #названи
+on: [push] #после какого действия выполнять
+jobs:
+  build:
+    runs-on: ubuntu 24.04.1 #ОС, дестрибутив, версия
+    steps:  #шаги которые нужно проделать
+      - uses: actions/checkout@v4 #загрузка файла из репозитория на машину(runs-on)
+      - run: g++ main.cpp src/add.cpp -o main
+      - run: ./main 4 6
