@@ -5,5 +5,6 @@ jobs:
     runs-on: ubuntu-latest #ОС, дестрибутив, версия
     steps:  #шаги которые нужно проделать
       - uses: actions/checkout@v4 #загрузка файла из репозитория на машину(runs-on)
-      - run: g++ main.cpp src/add.cpp -o main
-      - run: ./main 4 6
+      - run: sudo apt-get update && sudo apt-get install -y cmake
+      - run: mkdir cmake-build-debug && cmake -B cmake-build-debug -S . && cmake --build cmake-build-debug
+      - run: ./cmake-build-debug/main 4 6
