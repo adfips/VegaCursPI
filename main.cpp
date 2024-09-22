@@ -4,6 +4,12 @@
 #include "include/add.h"
 
 
+/**
+ * @brief Описание main
+ * @param argc количество аргументов
+ * @param argv аргументы
+ * @return результат
+ */
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         std::cerr << "Provide exactly 2 arguments\n";
