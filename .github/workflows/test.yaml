@@ -55,7 +55,9 @@ jobs:
         run: sudo apt install graphviz
 
       - name: Create documentation
-        run: doxygen -g
+        run: doxygen -g Doxyfile
+
+      - run: doxygen Doxyfile
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
