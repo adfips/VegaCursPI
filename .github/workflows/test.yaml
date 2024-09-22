@@ -56,8 +56,9 @@ jobs:
 
       - name: Modify Doxygen configuration
         run: |
-          sed -i 's|^INPUT.*|INPUT = include|g' Doxyfile
-          sed -i 's|^EXTRACT_ALL.*|EXTRACT_ALL = YES|g' Doxyfile
+          sed -i 's|^INPUT\s*=.*|INPUT = include|g' Doxyfile
+          sed -i 's|^EXTRACT_ALL\s*=.*|EXTRACT_ALL = YES|g' Doxyfile
+
       - name: Create documentation
         run: doxygen -g
 
