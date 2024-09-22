@@ -54,6 +54,10 @@ jobs:
       - name: Install Graphviz
         run: sudo apt install graphviz
 
+      - name: Modify Doxygen configuration
+        run: |
+          sed -i 's|^INPUT.*|INPUT = include|g' Doxyfile
+          sed -i 's|^EXTRACT_ALL.*|EXTRACT_ALL = YES|g' Doxyfile
       - name: Create documentation
         run: doxygen -g
 
