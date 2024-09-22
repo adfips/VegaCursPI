@@ -1,5 +1,10 @@
 name: build #названи
 on: [push] #после какого действия выполнять
+
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest #ОС, дестрибутив, версия
