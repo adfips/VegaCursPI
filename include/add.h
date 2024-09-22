@@ -11,5 +11,6 @@
 
     \return Новый объект типа *T*, равный сумме *a* и *b*.
 */
-template <class T>
-T add(T a, T b);
+
+int add(int a, int b);
+double add(double a, double b);
